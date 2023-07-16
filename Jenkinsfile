@@ -1,6 +1,6 @@
 node {
     stage('Clone code') {
-        git 'https://github.com/mehmetCt/demo-project.git'
+        git 'https://github.com/RuslanAmro/briteERP_hesper_project.git'
     }
 
     stage('Run tests'){

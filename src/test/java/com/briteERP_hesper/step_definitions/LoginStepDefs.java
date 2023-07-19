@@ -18,18 +18,21 @@ public class LoginStepDefs {
         String username = null;
         String password = null;
 
-        if (userType.equalsIgnoreCase("driver")) {
-            username = ConfigurationReader.getProperty("driver_username");
-            password = ConfigurationReader.getProperty("driver_password");
-        } else if (userType.equalsIgnoreCase("sales manager")) {
-            username = ConfigurationReader.getProperty("sales_manager_username");
-            password = ConfigurationReader.getProperty("sales_manager_password");
-        } else if (userType.equalsIgnoreCase("store manager")) {
-            username = ConfigurationReader.getProperty("store_manager_username");
-            password = ConfigurationReader.getProperty("store_manager_password");
-        }else if (userType.equalsIgnoreCase("POS_manager")) {
+        if (userType.equalsIgnoreCase("POS Manager")) {
             username = ConfigurationReader.getProperty("POS_manager_username");
             password = ConfigurationReader.getProperty("POS_manager_password");
+        } else if (userType.equalsIgnoreCase("Sales Manager")) {
+            username = ConfigurationReader.getProperty("sales_manager_username");
+            password = ConfigurationReader.getProperty("sales_manager_password");
+        } else if (userType.equalsIgnoreCase("CRM Manager")) {
+            username = ConfigurationReader.getProperty("CRM_manager_username");
+            password = ConfigurationReader.getProperty("CRM_manager_password");
+        } else if (userType.equalsIgnoreCase("Inventory Manager")) {
+            username = ConfigurationReader.getProperty("inventory_manager_username");
+            password = ConfigurationReader.getProperty("inventory_manager_password");
+        } else if (userType.equalsIgnoreCase("Expenses Manager")) {
+            username = ConfigurationReader.getProperty("expenses_manager_username");
+            password = ConfigurationReader.getProperty("expenses_manager_password");
         }
         //send username and password and login
         new LoginPage().login(username, password);
@@ -39,7 +42,6 @@ public class LoginStepDefs {
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username, password);
-
     }
 
 

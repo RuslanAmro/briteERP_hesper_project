@@ -56,7 +56,10 @@ public class US03_StepDefs {
         us03CalenderPageAa.monthTab.isDisplayed();
     }
 
-
+    @Then("user should be able to see the Weekly view option as a default")
+    public void user_should_be_able_to_see_the_weekly_view_option_as_a_default() {
+       us03CalenderPageAa.weekTab.isSelected();
+    }
     @Then("user should be able to select the Weekly view option")
     public void user_should_be_able_to_select_the_weekly_view_option () {
         us03CalenderPageAa.weekTab.click();

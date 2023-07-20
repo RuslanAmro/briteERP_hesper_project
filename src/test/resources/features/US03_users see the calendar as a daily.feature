@@ -37,5 +37,6 @@ Feature: Daily Calendar View
     Given user should see the dashboard
     When user should be able to click on Calendar
     Then the user is on the calendar page
+    And user should be able to see the Weekly view option as a default
     And user should be able to select the Weekly view option
     Then the calender should display events for the current week

@@ -10,12 +10,32 @@ Feature: Daily Calendar View
     Given the user logged in as "POS Manager"
 
 
-   @Calendar
-    Scenario:View Daily Calendar
+  @Calender
+  Scenario:View Daily Calendar
 
-      Given user should see the dashboard
-      When user should be able to click on Calendar
-      Then the user is on the calendar page
-      And user should be able to select the daily view option
-      Then the calender should display events for the current day
+    Given user should see the dashboard
+    When user should be able to click on Calendar
+    Then the user is on the calendar page
+    And user should be able to select the daily view option
+    Then the calender should display events for the current day
 
+
+  @Monthly
+
+
+  Scenario:View Monthly Calendar
+
+    Given user should see the dashboard
+    When user should be able to click on Calendar
+    Then the user is on the calendar page
+    And user should be able to select the Monthly view option
+    Then the calender should display events for the current Month
+
+  @Weekly
+  Scenario:View Weekly Calendar
+
+    Given user should see the dashboard
+    When user should be able to click on Calendar
+    Then the user is on the calendar page
+    And user should be able to select the Weekly view option
+    Then the calender should display events for the current week

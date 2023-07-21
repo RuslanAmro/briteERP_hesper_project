@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
-    public HomePage() {
+public class US06_MZ_HomePage {
+    public US06_MZ_HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -25,7 +25,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='btn btn-primary btn-sm o_form_button_save']")
     public WebElement saveButton;
 
-    @FindBy(xpath = "//*[@class='o_thread_author ']")
+    @FindBy(xpath = "//*[@name='name']/..")
     public WebElement customerInformation;
 
     @FindBy(xpath = "//*[@class='oe_kanban_global_click o_kanban_record']")
@@ -33,5 +33,14 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@class='btn btn-primary btn-sm o_form_button_edit']")
     public WebElement editButton;
+
+    @FindBy(xpath = "//*[@name='sale_ok']")
+    public WebElement FirstCheckBox;
+
+    @FindBy(xpath = "//*[@name='purchase_ok']")
+    public WebElement SecondCheckBox;
+
+    @FindBy(xpath = "//*[@name='can_be_expensed']")
+    public WebElement ThirdCheckBox;
 
 }

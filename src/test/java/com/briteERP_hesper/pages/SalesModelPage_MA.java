@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class SalesModelPage_MA {
 
     public SalesModelPage_MA() {
@@ -14,8 +16,11 @@ public class SalesModelPage_MA {
     @FindBy(xpath = "//a[@data-menu='445']")
     public WebElement SalesModelBtn;
 
+//    @FindBy(xpath = "//table//th[i]")
+//    public List<WebElement> headers;
 
-  /*  @FindBy(xpath = "//table//th[2]")
+
+    @FindBy(xpath = "//table//th[2]")
     public WebElement QuotationNumberHeader;
 
     @FindBy(xpath = "//table//th[3]")
@@ -32,7 +37,15 @@ public class SalesModelPage_MA {
 
     @FindBy(xpath = "//table//th[7]")
     public WebElement StatusHeader;
-*/
+
+    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    public WebElement searchBox;
+
+    @FindBy(xpath = "//table//tbody//tr[1]")
+    public WebElement searchResult;
+
+
+
 
 
 

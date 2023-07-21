@@ -2,11 +2,14 @@ package com.briteERP_hesper.pages;
 
 
 import com.briteERP_hesper.utilities.Driver;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+
+    public Alert inputUsername;
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);

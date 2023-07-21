@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/briteERP_hesper/step_definitions",
         dryRun = false,
-        tags = "@B29G20-202",
+        tags = "@B29G20-188",
         publish = true //generating a report with public link
 )
 public class CukesRunner {
